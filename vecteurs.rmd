@@ -1,0 +1,109 @@
+---
+title: "INITIATION AUX VECTEURS"
+author: "BEIDI DINA SAMUEL"
+date: "11/03/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## TP SUR LES VECTEURS
+Nous allons le presenter sous forme de TP
+
+# 1. Creer d'un vecteur, après avoir fixé la grane de générateur à 39 créer un vecteur à 45 éléments, nommé _bruit_, composé de nombres aléatoires extraits d'une loi de Poisson de paramètre 5.
+
+```{r Création du vecteur bruit}
+set.seed(39)
+bruit=rpois(lambda= 5,45)
+bruit
+```
+
+
+# 2. Afficher la valeur du quatrième élément
+
+```{r Afficher la valeur du quatrième élément}
+
+bruit [4]
+
+```
+
+
+# 3. Afficher les valeurs des 15 derniers éléments
+
+```{r Afficher les valeurs des 15 derniers éléments}
+
+bruit [31:45]
+
+```
+
+# 4. Afficher les valeurs des éléments 3,5,9,17 et 38
+
+```{r Afficher les valeurs des éléments 3,5,9,17 et 38}
+
+bruit [c(3, 5, 9, 17, 38)]
+
+```
+
+
+# 5. Afficher les valeurs inférieures à 5
+
+```{r Afficher les valeurs inférieures à 5}
+
+bruit [bruit < 5]
+
+```
+
+
+# 6. Créer un nouveau vecteur _bruitbis_ qui est une copie du vecteur _bruit_ 
+
+```{r Création d'un nouveau vecteur bruitbis}
+
+bruitbis <- bruit
+
+bruitbis[bruitbis < 5] = 0
+bruitbis[bruitbis > 6] = 1
+
+bruitbis
+
+```
+
+
+# 7. Proposer une autre solution à la question précédente à l'aide de la fonction _ifelse()_
+
+```{r Proposition d'une autre solution}
+
+bruitbis <- bruit
+
+bruitbis <- ifelse(bruitbis < 5 ,0,1)
+bruitbis
+
+```
+
+
+# 8. Combien d'éléments de bruits sont supérieurs à 3
+
+```{r}
+length(bruit[bruit > 3])
+
+set.seed(39)
+bruit=rpois(lambda= 5,45)
+bruit
+
+length(bruit[bruit > 3])
+```
+
+# Justification:
+Oui car le nombre d'elements superieurs a trois obtenu est égale, vue que nous avons fait usage de la fonction _set.seed()_
+
+
+# 9. Calculer avec R l'expression (exp(4))+(sin(pi/4)/sqrt(14))
+
+```{r Calcul de l'expression}
+resultat=(exp(4))+(sin(pi/4)/sqrt(14))
+
+resultat
+```

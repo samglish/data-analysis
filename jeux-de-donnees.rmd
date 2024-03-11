@@ -1,0 +1,41 @@
+---
+title: "INITIATION AUX VECTEURS"
+author: "BEIDI DINA SAMUEL"
+date: "11/03/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## MANIPULATION DES JEUX DE DONNEES
+
+# 1.Charger le jeu de données _diamonds_ du package _tidyverse_ (fichier vecteurs) puis la mettre dans l'objet _dia_.
+
+```{r Chargement de la librairie tidyverse et la base de données diamonds}
+library(tidyverse)
+data(diamonds)
+dia <- diamonds
+
+```
+
+
+# 2. Renommer les variables suivantes: carat en Poids, price en Prix, cut en Coupure , color en Couleur , clarity en Clarté, x en longueur, y en largeur, z en porfondeur_mm, depth en Profondeur_pourcentage
+Pour renommer les variables, nous allons utiliser la librairie _dplyr_
+
+```{r Renommer les variables}
+
+library(dplyr)
+
+dia <- rename(dia, Poids = carat , Prix = price , Coupure = cut, Couleur = color , Clarte = clarity ,  Longueur = x , Largeur = y , Profondeur_mm = z, Profondeur_pourcentage = depth)
+
+```
+
+# 3. Créer une nouvelle base de données _dia1_ contenant la variable Surface égale au produit de la longueur et de la largeur
+
+```{r Création d'une nouvelle bd avec une nouvelle variable}
+dia1 <- mutate(dia, Surface = Longueur * Largeur )
+```
+
+
