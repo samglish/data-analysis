@@ -5,7 +5,7 @@ Analyse des données de référence avec le langage R. Maîtrise statistique de 
 cliquez sur le lien pour l'installer
 https://cran.r-project.org/bin/windows/base/
 
-# Installer le langae rstudio
+# Installer rstudio
 cliquez sur le lien pour l'installer
 http://www.rstudio.com/products/rstudio/download/  
 
@@ -21,7 +21,7 @@ Dans ce fichier nous verrons comment manipuler les jeux de donnees _diamonds_ du
 Calculer la moyenne, l'ecart type, l'amplitude, decoupage des effectifs, regrouper les modalités, Vérifier avec des tris croisés, la creation d'une variable, Ordonner le tableau de données selon la surface croissante, diagramme etc.
 
 
-# Dependense
+# Dependances
 -> library(questionr)
 -> library(dplyr)
 -> library(tidyverse)
