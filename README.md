@@ -13,14 +13,6 @@ apres l'installation, veuillez ajouter le package rmarkdown
  
 install.packages("rmarkdown", dep = TRUE)
 
-# fichier vecteurs
-Dans ce fichier vous apprendrez a manipuler les vecteurs, utiliser la loi de poisson de parametre 5, trouver des solutions avec la fonction _ifelse()_, utiliser de la fonction _set.seed()_ et enfin calculer des expressions mathematiques(sin, cos, racine etc.)
-# fichier jeux-de-donnees
-Ici vous  verrez comment manipuler les jeux de donnees _diamonds_ du package _tidyverse_ et les mettre dans un objet, renommer les variables, creer une base de donnees et les dataframe etc.
-# fichier statistic
-Calculer la moyenne, l'ecart type, l'amplitude, decouper des effectifs, regrouper les modalités, Vérifier avec des tris croisés, la creation d'une variable, Ordonner le tableau de données selon la surface croissante, diagrammes etc.
-
-
 # Dependances
 -> library(questionr)
 -> library(dplyr)
@@ -98,8 +90,7 @@ bruit
 
 length(bruit[bruit > 3])
 ```
-
-# Justification:Oui car le nombre d'elements superieurs a trois obtenu est égale, vue que nous avons fait usage de la fonction set.seed()
+***Justification:Oui car le nombre d'elements superieurs a trois obtenu est égale, vue que nous avons fait usage de la fonction set.seed()***
 
 ### 9. Calculer avec R l'expression (exp(4))+(sin(pi/4)/sqrt(14))
 
